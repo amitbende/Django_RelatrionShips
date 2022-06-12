@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW STUDENT</title>
+</head>
+<body>
+<h1 style="color:green;"> This is Student Data Show Front End For Many to Many Relationships !!! </h1>
+    <table border="3px">
+        <thead>
+            <tr>
+                <th>ROLL NO</th>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>MAIL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in obj %}
+            <tr>
+                <td>{{i.roll_no}}</td>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}}</td>
+                <td>{{i.mail}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

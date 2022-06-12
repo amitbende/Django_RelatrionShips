@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW OWNER</title>
+</head>
+<body>
+<h1 style="color:green;"> This is Owner Information Table Using Many To Many Relationship !!! </h1>
+    <table border="3px">
+        <thead>
+            <tr>
+                <th>OWNER ID</th>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in obj %}
+            <tr>
+                <td>{{i.oid}}</td>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'ownerform_url' %}"> Click Here For owner Form...</a><br>
+    <a href="{% url 'carform_url' %}"> Click Here For Car Form...</a><br>
+    <a href="{% url 'cardata_url' %}"> Click Here For Car Data...</a>
+
+
+</body>
+</html>

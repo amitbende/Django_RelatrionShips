@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAR FORM</title>
+</head>
+<body>
+<h1 style="color:blue;"> This is Car Information Form Using Many To Many Relationship !!!</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table border="2px">
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="ADD CAR">
+    </form>
+    <a href="{% url 'ownerform_url' %}"> Click Here For Owner Form...</a><br>
+    <a href="{% url 'ownerdata_url' %}"> Click Here For Owner Data...</a><br>
+    <a href="{% url 'cardata_url' %}"> Click Here For Car Data...</a>
+
+</body>
+</html>

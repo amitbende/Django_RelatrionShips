@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW COURSE</title>
+</head>
+<body>
+<h1 style="color:green;"> This is Course Data Show Front End For Many to Many Relationships !!! </h1>
+    <table border="3px">
+        <thead>
+            <tr>
+                <th>STUDENT DATA</th>
+                <th>COURSE NAME</th>
+                <th>COURSE FEES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in obj %}
+            <tr>
+                <td>{{i.student}}</td>
+                <td>{{i.course_name}}</td>
+                <td>{{i.course_fees}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

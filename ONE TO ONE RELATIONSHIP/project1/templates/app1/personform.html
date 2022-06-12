@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PERSON FORM</title>
+</head>
+<body>
+<h1 style="color:green;"> This is Person Form For One To One Relations !!!</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table border="3">
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="ADD PERSON">
+    </form>
+
+</body>
+</html>

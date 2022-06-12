@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENT FORM</title>
+</head>
+<body>
+<h1 style="color:green;"> This is Student Form For Many to Many Relationships !!! </h1>
+    <form method="post">
+        {% csrf_token %}
+        <table border="3px">
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="ADD STUDENT">
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW CAR</title>
+</head>
+<body>
+<h1 style="color:darkred;"> This is Car Information Table Using Many To Many Relationship !!! </h1>
+    <table border="3px">
+        <thead>
+            <tr>
+                <th>CAR ID</th>
+                <th>YEAR</th>
+                <th>BRAND</th>
+                <th>MODEL</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in obj %}
+            <tr>
+                <td>{{i.cid}}</td>
+                <td>{{i.year}}</td>
+                <td>{{i.brand}}</td>
+                <td>{{i.model}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'carform_url' %}"> Click Here For Car Form...</a><br>
+    <a href="{% url 'ownerform_url' %}"> Click Here For Owner Form...</a><br>
+    <a href="{% url 'ownerdata_url' %}"> Click Here For Owner Data...</a>
+
+</body>
+</html>
